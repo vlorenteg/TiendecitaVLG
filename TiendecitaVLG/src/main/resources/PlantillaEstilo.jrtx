@@ -1,0 +1,22 @@
+<jasperTemplate>
+	<style name="Titulo" mode="Opaque" forecolor="#040F02" backcolor="#C2A557" hTextAlign="Center" vTextAlign="Middle" fontName="Times New Roman" fontSize="45.0"/>
+	<style name="Subtitulo" mode="Opaque" forecolor="#E6C039" backcolor="#050000" hTextAlign="Center" vTextAlign="Middle" fontName="Times New Roman" fontSize="16.0"/>
+	<style name="Paginas" hTextAlign="Center" vTextAlign="Middle" fontName="Times New Roman"/>
+	<style name="Descripcion" mode="Opaque" backcolor="#BDF7FC" hTextAlign="Center" vTextAlign="Middle" fontName="Times New Roman" fontSize="14.0" bold="true">
+		<pen lineWidth="1.0" lineStyle="Solid"/>
+		<box>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Tabla" hTextAlign="Center" vTextAlign="Middle" fontName="Times New Roman" fontSize="14.0">
+		<box>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+</jasperTemplate>

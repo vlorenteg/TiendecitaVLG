@@ -1,0 +1,135 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="informeTickets" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b64934dc-850e-47e9-98f5-1cd3205d3c34">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ticketstiendecita"/>
+	<template><![CDATA["PlantillaEstilo.jrtx"]]></template>
+	<dataset name="tickets" uuid="f2e0d9e0-b94e-49e7-a9d9-795db40067db">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ticketstiendecita"/>
+		<query language="SQL"><![CDATA[SELECT * FROM tickets
+]]></query>
+		<field name="idTicket" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="idTicket"/>
+			<property name="com.jaspersoft.studio.field.label" value="idTicket"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+		</field>
+		<field name="idArticuloFK" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="idArticuloFK"/>
+			<property name="com.jaspersoft.studio.field.label" value="idArticuloFK"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+		</field>
+		<field name="fecha" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+			<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+		</field>
+		<field name="cantidad" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+			<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+		</field>
+		<field name="total" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="total"/>
+			<property name="com.jaspersoft.studio.field.label" value="total"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+		</field>
+	</dataset>
+	<parameter name="fechaDesde" class="java.sql.Date"/>
+	<parameter name="fechaHasta" class="java.sql.Date"/>
+	<query language="SQL"><![CDATA[SELECT * FROM tickets WHERE fecha BETWEEN $P{fechaDesde} AND $P{fechaHasta}]]></query>
+	<field name="idTicket" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idTicket"/>
+		<property name="com.jaspersoft.studio.field.label" value="idTicket"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+	</field>
+	<field name="idArticuloFK" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idArticuloFK"/>
+		<property name="com.jaspersoft.studio.field.label" value="idArticuloFK"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+	</field>
+	<field name="total" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total"/>
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tickets"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="3d3a8e6b-e506-405d-b601-43cf907ad7d5" x="0" y="0" width="550" height="79" style="Titulo">
+			<text><![CDATA[TICKETS]]></text>
+		</element>
+	</title>
+	<pageHeader height="64" splitType="Stretch">
+		<element kind="staticText" uuid="6bdfe92a-d8cb-4577-abde-c8daf90f23f2" x="0" y="0" width="550" height="30" style="Subtitulo">
+			<text><![CDATA[Informe detallado de los tickets generados en estas fechas:]]></text>
+		</element>
+		<element kind="textField" uuid="07dd0e9d-3c97-40be-903a-c1a401bf266d" x="0" y="30" width="280" height="30" hTextAlign="Right" vTextAlign="Middle" style="Subtitulo">
+			<expression><![CDATA["Desde: " + $P{fechaDesde} + " -"]]></expression>
+		</element>
+		<element kind="textField" uuid="4dd12b99-af8a-457b-a624-5c35b143cbbb" x="280" y="30" width="270" height="30" hTextAlign="Left" vTextAlign="Middle" style="Subtitulo">
+			<expression><![CDATA["- Hasta: " + $P{fechaHasta}]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="50">
+		<element kind="staticText" uuid="cbd0ddd1-a1cb-434a-aa45-9a6444299521" x="0" y="20" width="111" height="30" fontName="Times New Roman" printInFirstWholeBand="true" style="Descripcion">
+			<text><![CDATA[idTicket]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55af7996-da77-4852-aef7-a84a8b71dbdc"/>
+		</element>
+		<element kind="staticText" uuid="96565859-d5c2-46d4-8763-f2c17c2fd266" x="111" y="20" width="111" height="30" fontName="Times New Roman" printInFirstWholeBand="true" style="Descripcion">
+			<text><![CDATA[idArticuloFK]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14e1c5ab-89a9-40a5-afa6-d7d5f99413b0"/>
+		</element>
+		<element kind="staticText" uuid="317b872b-6fa4-4c96-8db2-c1d287e4ad59" x="222" y="20" width="111" height="30" fontName="Times New Roman" printInFirstWholeBand="true" style="Descripcion">
+			<text><![CDATA[fecha]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3313dc44-f92c-4179-a062-8a77200a6ff2"/>
+		</element>
+		<element kind="staticText" uuid="fd37ae9a-4fc8-4837-9109-19465c5fa94f" x="333" y="20" width="111" height="30" fontName="Times New Roman" printInFirstWholeBand="true" style="Descripcion">
+			<text><![CDATA[cantidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bdbe257d-1126-4a54-b8fd-60e7b84360f8"/>
+		</element>
+		<element kind="staticText" uuid="5c6097ea-9aa2-4fcd-a09f-b81b52cef594" x="444" y="20" width="106" height="30" fontName="Times New Roman" printInFirstWholeBand="true" style="Descripcion">
+			<text><![CDATA[total]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b29b059-a75a-45d6-848d-a5d0c91f94a3"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="0328c0fd-972a-4e25-ad97-c64ab66989ab" x="0" y="0" width="111" height="30" printInFirstWholeBand="true" style="Tabla">
+				<expression><![CDATA[$F{idTicket}]]></expression>
+			</element>
+			<element kind="textField" uuid="883f54b2-01e8-4fff-a90f-07eddafb319b" x="111" y="0" width="111" height="30" printInFirstWholeBand="true" style="Tabla">
+				<expression><![CDATA[$F{idArticuloFK}]]></expression>
+			</element>
+			<element kind="textField" uuid="32532784-2df8-4078-b080-f0b0049d9e48" x="222" y="0" width="111" height="30" printInFirstWholeBand="true" style="Tabla">
+				<expression><![CDATA[$F{fecha}]]></expression>
+			</element>
+			<element kind="textField" uuid="16a424eb-3d99-492c-906b-6a9dcadae80c" x="333" y="0" width="111" height="30" printInFirstWholeBand="true" style="Tabla">
+				<expression><![CDATA[$F{cantidad}]]></expression>
+			</element>
+			<element kind="textField" uuid="89d5a2ce-60f0-4e5f-9aef-737189efcaaf" x="444" y="0" width="106" height="30" printInFirstWholeBand="true" style="Tabla">
+				<expression><![CDATA[$F{total}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="54" splitType="Stretch">
+		<element kind="textField" uuid="d4c4cedd-a87d-407e-ba0d-b3f45578a638" x="350" y="10" width="100" height="30" hTextAlign="Right" style="Paginas">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+			<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ticketstiendecita"/>
+		</element>
+		<element kind="textField" uuid="8b3588f3-bf68-46f3-9dcf-ebc6054c3324" x="450" y="10" width="100" height="30" evaluationTime="Report" hTextAlign="Left" style="Paginas">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+			<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ticketstiendecita"/>
+		</element>
+	</pageFooter>
+</jasperReport>

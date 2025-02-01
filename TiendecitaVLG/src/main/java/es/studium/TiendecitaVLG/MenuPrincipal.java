@@ -14,7 +14,6 @@ public class MenuPrincipal extends JFrame {
     private static final long serialVersionUID = 1L;
     private JPanel contentPane; // Panel principal
 
-   
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() { // Ejecuta la interfaz gráfica
             public void run() {
@@ -32,89 +31,114 @@ public class MenuPrincipal extends JFrame {
     public MenuPrincipal() {
         setTitle("TiendecitaVLG"); // Título
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cierre de ventana
-        setBounds(100, 100, 565, 200); // Posición y tamaño de la ventana inicial
-        
+        setBounds(100, 100, 565, 250); // Posición y tamaño de la ventana inicial
+
         contentPane = new JPanel(); // Crea el panel principal
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        // Etiqueta articulos
-        JLabel lblNewLabel = new JLabel("Artículos:");
-        lblNewLabel.setBounds(10, 49, 76, 14);
-        contentPane.add(lblNewLabel);
+        // Etiqueta artículos
+        JLabel lblArticulos = new JLabel("Artículos:");
+        lblArticulos.setBounds(10, 49, 76, 14);
+        contentPane.add(lblArticulos);
 
         // Etiqueta Tickets
-        JLabel lblNewLabel_1 = new JLabel("Tickets:");
-        lblNewLabel_1.setBounds(10, 93, 76, 14);
-        contentPane.add(lblNewLabel_1);
+        JLabel lblTickets = new JLabel("Tickets:");
+        lblTickets.setBounds(10, 93, 76, 14);
+        contentPane.add(lblTickets);
+        
+     // Etiqueta Informes
+        JLabel lblInformes = new JLabel("Informes:");
+        lblInformes.setBounds(10, 137, 76, 14);
+        contentPane.add(lblInformes);
 
         // Botón alta para artículos
-        JButton btnNewButton = new JButton("Alta");
-        btnNewButton.addActionListener(new ActionListener() {
+        JButton btnAltaArticulo = new JButton("Alta");
+        btnAltaArticulo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 AltaArticulo altaArticuloFrame = new AltaArticulo();
                 altaArticuloFrame.setVisible(true);
             }
         });
-        btnNewButton.setBounds(67, 45, 109, 23);
-        contentPane.add(btnNewButton);
+        btnAltaArticulo.setBounds(67, 45, 109, 23);
+        contentPane.add(btnAltaArticulo);
 
         // Botón consulta para artículos
-        JButton btnNewButton_1 = new JButton("Consulta");
-        btnNewButton_1.addActionListener(new ActionListener() {
+        JButton btnConsultaArticulo = new JButton("Consulta");
+        btnConsultaArticulo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 ConsultaArticulo consultaArticuloDialogo = new ConsultaArticulo();
                 consultaArticuloDialogo.setVisible(true);
             }
         });
-        btnNewButton_1.setBounds(186, 45, 109, 23);
-        contentPane.add(btnNewButton_1);
+        btnConsultaArticulo.setBounds(186, 45, 109, 23);
+        contentPane.add(btnConsultaArticulo);
 
         // Botón modificación para artículos
-        JButton btnNewButton_2 = new JButton("Modificación");
-        btnNewButton_2.addActionListener(new ActionListener() {
+        JButton btnModificacionArticulo = new JButton("Modificación");
+        btnModificacionArticulo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Al hacer clic en "Modificación", abrir el diálogo para seleccionar el artículo
                 SeleccionarArticuloModificacion seleccionarArticuloDialogo = new SeleccionarArticuloModificacion();
                 seleccionarArticuloDialogo.setVisible(true);
             }
         });
-        btnNewButton_2.setBounds(305, 45, 109, 23);
-        contentPane.add(btnNewButton_2);
+        btnModificacionArticulo.setBounds(305, 45, 109, 23);
+        contentPane.add(btnModificacionArticulo);
 
         // Botón baja para artículos
-        JButton btnNewButton_3 = new JButton("Baja");
-        btnNewButton_3.addActionListener(new ActionListener() {
+        JButton btnBajaArticulo = new JButton("Baja");
+        btnBajaArticulo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 BajaArticulo bajaArticuloDialogo = new BajaArticulo();
                 bajaArticuloDialogo.setVisible(true);
             }
         });
-        btnNewButton_3.setBounds(423, 45, 109, 23);
-        contentPane.add(btnNewButton_3);
+        btnBajaArticulo.setBounds(423, 45, 109, 23);
+        contentPane.add(btnBajaArticulo);
 
         // Botón alta para tickets
-        JButton btnNewButton_4 = new JButton("Alta");
-        btnNewButton_4.addActionListener(new ActionListener() {
+        JButton btnAltaTicket = new JButton("Alta");
+        btnAltaTicket.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 AltaTicket altaTicketFrame = new AltaTicket();
                 altaTicketFrame.setVisible(true);
             }
         });
-        btnNewButton_4.setBounds(67, 89, 109, 23);
-        contentPane.add(btnNewButton_4);
+        btnAltaTicket.setBounds(67, 89, 109, 23);
+        contentPane.add(btnAltaTicket);
 
         // Botón consulta para tickets
-        JButton btnNewButton_5 = new JButton("Consulta");
-        btnNewButton_5.addActionListener(new ActionListener() {
+        JButton btnConsultaTicket = new JButton("Consulta");
+        btnConsultaTicket.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 ConsultaTicket consultaTicketDialogo = new ConsultaTicket();
                 consultaTicketDialogo.setVisible(true);
             }
         });
-        btnNewButton_5.setBounds(186, 89, 109, 23);
-        contentPane.add(btnNewButton_5);
+        btnConsultaTicket.setBounds(186, 89, 109, 23);
+        contentPane.add(btnConsultaTicket);
+        
+        // Botón consulta informe artículos
+        JButton btnInformeArticulos = new JButton("Informe Artículos");
+        btnInformeArticulos.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Conexiones.generarPDFarticulos();
+            }
+        });
+        btnInformeArticulos.setBounds(67, 135, 150, 23);
+        contentPane.add(btnInformeArticulos);
+
+        // Botón consulta infomre tickets 
+        JButton btnConsultaTickets = new JButton("Informe Tickets");
+        btnConsultaTickets.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VistaConsultaTickets vistaConsultaTicketsFrame = new VistaConsultaTickets();
+                vistaConsultaTicketsFrame.setVisible(true);
+            }
+        });
+        btnConsultaTickets.setBounds(230, 135, 150, 23);
+        contentPane.add(btnConsultaTickets);
+        
     }
 }
-
