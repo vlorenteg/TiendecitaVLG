@@ -5,7 +5,31 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>TiendecitaVLG</name>
   
+  
    <dependencies>
+<dependency>
+ <groupId>net.sf.jasperreports</groupId>
+ <artifactId>jasperreports</artifactId>
+ <version>7.0.1</version>
+</dependency>
+
+<dependency>
+ <groupId>net.sf.jasperreports</groupId>
+ <artifactId>jasperreports-pdf</artifactId>
+ <version>7.0.1</version>
+</dependency>
+
+<dependency>
+ <groupId>net.sf.jasperreports</groupId>
+ <artifactId>jasperreports-excel-poi</artifactId>
+ <version>7.0.1</version>
+</dependency>
+
+<dependency>
+ <groupId>org.apache.logging.log4j</groupId>
+ <artifactId>log4j-core</artifactId>
+ <version>2.24.3</version>
+</dependency>
   <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 <dependency>
     <groupId>com.mysql</groupId>
